@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Adopte Un Dev si t'arrive a pusher
+                    Adopte Un Dev <br >car t'as réussi à pusher ^^
                 </div>
 
                 <div class="links">

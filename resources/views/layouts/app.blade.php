@@ -1,12 +1,4 @@
 
-/**
- * Created by PhpStorm.
- * User: mel
- * Date: 18/06/2019
- * Time: 10:47
- */
-// resources/views/layouts/app.blade.php
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
