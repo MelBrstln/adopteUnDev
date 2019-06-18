@@ -6,7 +6,12 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+
+import Vue from 'vue'; // Importing Vue Library
+window.Vue = Vue;
+import VueRouter from 'vue-router'; // importing Vue router library
+import router from './router';
+Vue.use(VueRouter);
 
 /**
  * The following block of code may be used to automatically register your
@@ -27,6 +32,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('index', require('./components/index'));
+
 const app = new Vue({
     el: '#app',
+    router
 });
