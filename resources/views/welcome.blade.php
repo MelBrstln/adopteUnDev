@@ -13,7 +13,7 @@
         <title>Laravel</title>
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/app.js') }}" ></script>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -105,8 +105,8 @@
             </div>
         </div>
 
-        <div id="app">
-            <index></index>
+        <div>
+            <router-view></router-view>
         </div>
     </body>
 </html>
