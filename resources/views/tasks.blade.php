@@ -50,7 +50,7 @@
         </form>
     </div>
 
-    <!-- TODO: Current Tasks -->
+    <!--  Current Tasks -->
 
     @if (count($tasks) > 0)
         <div class="panel panel-default">
@@ -77,11 +77,11 @@
                             </td>
 
                             <td>
-                                <!-- TODO: Delete Button -->
+                                <!-- Delete Button -->
                         <tr>
                             <!-- Task Name -->
                             <td class="table-text">
-                                <div>{{ $task->name }}</div>git
+                                <div>{{ $task->name }}</div>
                             </td>
 
                             <!-- Delete Button -->
