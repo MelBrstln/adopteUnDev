@@ -10,35 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Task;
-use Illuminate\Http\Request;
-
-// 3 routes pour la liste des taches
-
-/**
- * Display All Tasks
- */
-Route::get('/tasks', function () {
-    //
-    return view('tasks');
-});
-
-/**
- * Add A New Task
- */
-Route::post('/task', function (Request $request) {
-    //
-});
-
-/**
- * Delete An Existing Task
- */
-Route::delete('/task/{id}', function ($id) {
-    //
-});
-
-
-//route de base du projet Laravel
 
 Route::get('/', function () {
     return view('welcome');
