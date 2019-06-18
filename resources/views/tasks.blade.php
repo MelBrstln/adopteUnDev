@@ -55,7 +55,7 @@
     @if (count($tasks) > 0)
         <div class="panel panel-default">
             <div class="panel-heading">
-                Current Tasks
+                Taches en cours
             </div>
 
             <div class="panel-body">
@@ -63,7 +63,7 @@
 
                     <!-- Table Headings -->
                     <thead>
-                    <th>Task</th>
+                    <th>Tache</th>
                     <th>&nbsp;</th>
                     </thead>
 
@@ -73,7 +73,7 @@
                         <tr>
                             <!-- Task Name -->
                             <td class="table-text">
-                                <div>{{ $task->name }}</div>
+                                <div>{{ $task->id }}</div>
                             </td>
 
                             <td>
@@ -81,7 +81,7 @@
                         <tr>
                             <!-- Task Name -->
                             <td class="table-text">
-                                <div>{{ $task->name }}</div>
+                                <div>{{ $task->name }}</div>git
                             </td>
 
                             <!-- Delete Button -->
@@ -90,7 +90,7 @@
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
 
-                                    <button>Delete Task</button>
+                                    <button>Supprimer tache</button>
                                 </form>
                             </td>
                         </tr>
