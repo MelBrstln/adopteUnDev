@@ -1,5 +1,5 @@
 
-# Projet "adopteUnDev" : Vivien, Richard, Cédric, Rachid
+# Projet "adopteUnDev" : Vivien, Mélanie, Richard, Cédric, Rachid
 
 ## DESCRIPTION FONCTIONNELLE
 
