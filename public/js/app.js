@@ -54941,8 +54941,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\vivien.koelsch\Desktop\Test\adopteUnDev\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\vivien.koelsch\Desktop\Test\adopteUnDev\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\vivien.koelsch\Desktop\adopteUnDev\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\vivien.koelsch\Desktop\adopteUnDev\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ }),
