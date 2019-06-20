@@ -13,7 +13,7 @@
         <title>Laravel</title>
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" ></script>
+        <script src="{{ asset('js/app.js') }}" defer></script>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -93,6 +93,8 @@
                     Adopte Un Dev <br >car t'as réussi à pusher ^^
                 </div>
 
+
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -103,10 +105,11 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
+                <div id="app">
+                <index></index>
+                </div>
         </div>
 
-        <div>
-            <router-view></router-view>
-        </div>
+
     </body>
 </html>

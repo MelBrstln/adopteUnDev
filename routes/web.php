@@ -13,6 +13,7 @@
 use App\Task;
 use Illuminate\Http\Request;
 
+
 // 3 routes pour la liste des taches
 
 /**
@@ -62,6 +63,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/{any?}', function (){
-    return view('welcome');
-})->where('any', '[\/\w\.-]*');
+Route::get('/produit', 'ProfilController@show');

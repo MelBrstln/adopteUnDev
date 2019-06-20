@@ -1,5 +1,6 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 /*
@@ -17,10 +18,10 @@ const routes = [
         component: Home
     },
     {
-        path: '/vueapp/public/products',
+        path: '/components/produits',
         name: 'products',
-        component: Products
-    }
+        component: Products,
+    },
 ];
 
 

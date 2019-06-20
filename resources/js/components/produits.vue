@@ -1,11 +1,9 @@
 <template>
     <div>
-        <input type="text" v-model="fruit" placeholder="ajouter un fruit"/>
-        <button v-on:click="ajouterFruit">Ajouter !</button>
-        <ul>
-            <li v-for="(fruit, index) in fruits">
-                {{fruit.nom}}
-                <button v-on:click="supprimerFruit(index)">Supprimer</button>
+        <h1>Ceci zerty</h1>
+        <ul >
+            <li v-for="item in items" >
+                {{ item.message }}
             </li>
         </ul>
     </div>
@@ -13,42 +11,15 @@
 
 <script>
     export default {
-        data() {
-            return {
-                fruit: '',
-                fruits: [
-                    {
-                        nom: "tomate"
-                    },
-                    {
-                        nom: "cacao"
-                    },
-                    {
-                        nom: "banane"
-                    },
-                    {
-                        nom: "pomme"
-                    },
-                ]
-            }
-        },
+        name: "produits",
 
-        methods: {
-            ajouterFruit: function () {
-                var vm = this;
-                vm.fruits.push({nom: vm.fruit});
-            },
-            supprimerFruit: function(index){
-                var vm = this;
-                vm.fruits.splice(index, 1);
-            },
-            getFruits : function () {
-                return
-            }
-        },
-        mounted() {
-
-        }
+        data(){
+                return{
+            items: [
+                { message: 'Nom : Richard' },
+                { message: 'Talent : Il est bô' },
+                { message: 'Passion : le sandwich au jambon' }
+            ]}}
     }
 </script>
 

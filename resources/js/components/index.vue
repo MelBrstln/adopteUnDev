@@ -1,16 +1,9 @@
 <template>
-    <div>
+    <div id="app">
+    <h1>{{ title }}</h1>
+        <router-link :to="{ name: 'products' }">Produit</router-link>
+    <router-view></router-view>
 
-
-        TEST ******************************
-        <!--<ul>-->
-            <!--<li v-for="(route, key) in routes">-->
-                <!--<router-link  :to="{ name : route.path }" :key="key" style="text-transform:capitalize;">{{route.name}}</router-link>-->
-            <!--</li>-->
-        <!--</ul>-->
-        <div>
-            <router-view></router-view>
-        </div>
     </div>
 </template>
 
@@ -18,23 +11,12 @@
     export default {
         data() {
             return {
-                routes: [
-                    {
-                        name: 'Accueil',
-                        path: 'home'
-                    },
-
-                    {
-                        name: 'Produits',
-                        path: 'products'
-                    }
-                ]
+                title: 'Welcome To My Site'
             }
-        },
-        mounted() {
-
         }
     }
+
+
 </script>
 
 <style scoped>

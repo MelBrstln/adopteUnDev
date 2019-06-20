@@ -7,24 +7,27 @@
 require('./bootstrap');
 
 
-// import Vue from 'vue'; // Importing Vue Library
+import Vue from 'vue'; // Importing Vue Library
 window.Vue = require('vue');
 import VueRouter from 'vue-router'; // importing Vue router library
 import router from './router';
-Vue.use(VueRouter);
 const VueResource = require('vue-resource');
 Vue.use(VueResource);
-
+import index from "./components/index.vue";
+Vue.use(VueRouter);
+import Vuex from 'vuex';
 
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-
-Vue.component('index', require('./components/index'));
+Vue.component('index', require('./components/index.vue'));
 
 const app = new Vue({
-    el: 'app',
-    router
+    el: '#app',
+    router,
+    components: {
+        index
+    }
 });
