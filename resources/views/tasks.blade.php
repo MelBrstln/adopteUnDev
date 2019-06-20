@@ -50,12 +50,12 @@
         </form>
     </div>
 
-    <!-- TODO: Current Tasks -->
+    <!--  Current Tasks -->
 
     @if (count($tasks) > 0)
         <div class="panel panel-default">
             <div class="panel-heading">
-                Current Tasks
+                Taches en cours
             </div>
 
             <div class="panel-body">
@@ -63,7 +63,7 @@
 
                     <!-- Table Headings -->
                     <thead>
-                    <th>Task</th>
+                    <th>Tache</th>
                     <th>&nbsp;</th>
                     </thead>
 
@@ -73,11 +73,11 @@
                         <tr>
                             <!-- Task Name -->
                             <td class="table-text">
-                                <div>{{ $task->name }}</div>
+                                <div>{{ $task->id }}</div>
                             </td>
 
                             <td>
-                                <!-- TODO: Delete Button -->
+                                <!-- Delete Button -->
                         <tr>
                             <!-- Task Name -->
                             <td class="table-text">
@@ -90,7 +90,7 @@
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
 
-                                    <button>Delete Task</button>
+                                    <button>Supprimer tache</button>
                                 </form>
                             </td>
                         </tr>
