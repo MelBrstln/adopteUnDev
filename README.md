@@ -7,7 +7,7 @@
 |Intégrateur|Contrôleur|URL|HTTP|Template : View (HTML)|Action|Avancement (:green_heart: :yellow_heart: :heart:)|
 |--- |--- |--- |--- |--- |--- |--- |
 |Mélanie|?|/|GET|welcome.blade.php|Afficher la page d'accueil|:yellow_heart:|
-|Vivien|ProfilController|/produit/{id}|GET|profil.blade.php|Afficher un profil/produit en particulier|:yellow_heart:|
+|Vivien|ProfilController@show|/produit/{id}|GET|profil.blade.php|Afficher un profil/produit en particulier|:yellow_heart:|
 
 
 
