@@ -1726,6 +1726,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1745,6 +1746,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -37096,7 +37098,9 @@ var render = function() {
         _vm._v("Produit")
       ]),
       _vm._v(" "),
-      _c("router-view")
+      _c("router-view"),
+      _vm._v(" "),
+      _c("h1", [_vm._v(_vm._s(_vm.dev))])
     ],
     1
   )
@@ -37134,7 +37138,9 @@ var render = function() {
         ])
       }),
       0
-    )
+    ),
+    _vm._v(" "),
+    _c("h1", [_vm._v(_vm._s(_vm.dev))])
   ])
 }
 var staticRenderFns = []
@@ -54601,6 +54607,8 @@ var VueResource = __webpack_require__(/*! vue-resource */ "./node_modules/vue-re
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(VueResource);
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+window.$ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+window.JQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
  // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);

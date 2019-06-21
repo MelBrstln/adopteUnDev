@@ -15,6 +15,8 @@ const VueResource = require('vue-resource');
 Vue.use(VueResource);
 import index from "./components/index.vue";
 Vue.use(VueRouter);
+window.$ = require('jquery');
+window.JQuery = require('jquery');
 import Vuex from 'vuex';
 
 // const files = require.context('./', true, /\.vue$/i);

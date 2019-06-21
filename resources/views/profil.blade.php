@@ -78,6 +78,7 @@
     Adopte Un Dev <br >car t'as réussi à pusher ^^
 </div>
 
+<div>{{$dev->name}}</div>
 
 <div id="app">
 <index></index>
