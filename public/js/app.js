@@ -1727,6 +1727,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   resource: null,
   data: function data() {
@@ -1735,7 +1737,24 @@ __webpack_require__.r(__webpack_exports__);
       counter: this.ids
     };
   },
-  props: ["devs", "ids"]
+  props: ["devs", "ids"],
+  methods: {
+    numeroIdDecrement: function numeroIdDecrement() {
+      if (this.counter < 1) {
+        this.counter = 1;
+      }
+
+      this.counter--;
+    },
+    numeroIdIncrement: function numeroIdIncrement() {
+      this.counter++;
+
+      if (this.counter === this.devs.length) {
+        this.counter = this.counter - 1;
+      }
+    },
+    envoyerMessage: function envoyerMessage(id) {}
+  }
 });
 
 /***/ }),
@@ -37077,13 +37096,13 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "app" } }, [
     _c("h1", [_vm._v(_vm._s(_vm.title) + _vm._s(this.devs[_vm.counter].name))]),
-    _vm._v(" "),
+    _vm._v("\n    " + _vm._s(this.counter) + "\n    "),
     _c(
       "button",
       {
         on: {
           click: function($event) {
-            _vm.counter -= 1
+            return _vm.numeroIdDecrement()
           }
         }
       },
@@ -37095,11 +37114,23 @@ var render = function() {
       {
         on: {
           click: function($event) {
-            _vm.counter += 1
+            return _vm.numeroIdIncrement()
           }
         }
       },
       [_vm._v("profil suivant")]
+    ),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        on: {
+          click: function($event) {
+            _vm.envoyerMessage(this.devs[_vm.counter].id)
+          }
+        }
+      },
+      [_vm._v("Mettre dans le panier")]
     )
   ])
 }

@@ -19,5 +19,8 @@ class ProfilController extends Controller
         return view('profil', ['dev'=>$dev, 'id' => $id]);
     }
 
-
+    public function message($id){
+        $dev = Developer::all()->where('id', $id);
+        return view('message', ['dev' => $dev]);
+    }
 }
