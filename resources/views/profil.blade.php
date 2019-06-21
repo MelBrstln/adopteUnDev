@@ -74,12 +74,6 @@
 </head>
 <body>
 
-{{--<div class="title m-b-md">--}}
-    {{--Adopte Un Dev <br >car t'as réussi à pusher ^^--}}
-{{--</div>--}}
-
-{{--<div>{{$dev[0]->name}}</div>--}}
-
 <div id="app">
 <index :devs="{{$dev}}" :ids="{{$id}}"></index>
 </div>

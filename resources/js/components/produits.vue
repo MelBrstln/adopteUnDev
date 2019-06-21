@@ -1,9 +1,7 @@
 <template>
     <div>
-        <h1>Un profil</h1>
-        <div v-for="de in this.devs">
-            <h4>{{ de.name }}</h4>
-        </div>
+        produit.vue.js
+
     </div>
 </template>
 
@@ -11,7 +9,7 @@
 
     export default {
         name: "produits",
-        props: ["devs"]
+
     }
 </script>
 
