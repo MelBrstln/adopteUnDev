@@ -12,6 +12,7 @@
 */
 use App\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/vue/{vue_capture?}', function () {
     return view('vue.index');
@@ -23,7 +24,7 @@ Route::get('/vue/{vue_capture?}', function () {
  * Display All Tasks
  */
 Route::get('/tasks', function () {
-    $tasks = Task::orderBy('created_at', 'asc')->get();
+    $tasks= Task::orderBy('created_at','desc')->get();
 
     return view('tasks', [
         'tasks' => $tasks

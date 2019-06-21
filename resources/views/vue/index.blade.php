@@ -12,5 +12,5 @@
     <div id="app">
         <router-view></router-view>
     </div>
-    <script src="/js/vue-app.js"></script>
+    <script src="js/vue-app.js"></script>
 @endsection

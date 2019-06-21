@@ -6,7 +6,7 @@
     export default {
         data () {
             return {
-                message: 'This is the home component!'
+                message: 'This is the home component! and it is gonna become something like the profile page of some dev.'
             };
         }
     };
