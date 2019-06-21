@@ -16,15 +16,15 @@ class CreateDevelopersTable extends Migration
         Schema::create('developers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('full-name');
+            $table->string('firstName');
             $table->string('email');
-            $table->string('telephone')->nullable();
+            $table->string('phoneNumber')->nullable();
             $table->string('adresse')->nullable();
-            $table->string('postal-code')->nullable();
+            $table->string('postcode')->nullable();
             $table->string('city')->nullable();
             $table->longText('resume');
             $table->string('cv')->nullable();
-            $table ->string('pricture')->nullable();
+            $table ->string('picture')->nullable();
             $table->string('jobInterest')->nullable();
             $table->timestamps();
         });
