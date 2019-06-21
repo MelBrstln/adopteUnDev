@@ -31,5 +31,5 @@ const app = new Vue({
     router,
     components: {
         index
-    }
+    },
 });

@@ -1727,12 +1727,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  resource: null,
   data: function data() {
     return {
-      title: 'Welcome To My Site'
+      title: 'Profil de ',
+      counter: this.ids
     };
-  }
+  },
+  props: ["devs", "ids"] // mounted(){
+  //     this.resource = this.$resource('/dev');
+  //     this.resource.get().then((response) => {
+  //         this.dev = response.body
+  //     })
+  // }
+
 });
 
 /***/ }),
@@ -1755,22 +1770,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "produits",
-  data: function data() {
-    return {
-      items: [{
-        message: 'Nom : Richard'
-      }, {
-        message: 'Talent : Il est bô'
-      }, {
-        message: 'Passion : le sandwich au jambon'
-      }]
-    };
-  }
+  props: ["devs"]
 });
 
 /***/ }),
@@ -37088,22 +37090,33 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { attrs: { id: "app" } },
-    [
-      _c("h1", [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: { name: "products" } } }, [
-        _vm._v("Produit")
-      ]),
-      _vm._v(" "),
-      _c("router-view"),
-      _vm._v(" "),
-      _c("h1", [_vm._v(_vm._s(_vm.dev))])
-    ],
-    1
-  )
+  return _c("div", { attrs: { id: "app" } }, [
+    _c("h1", [_vm._v(_vm._s(_vm.title) + _vm._s(this.devs[_vm.counter].name))]),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        on: {
+          click: function($event) {
+            _vm.counter -= 1
+          }
+        }
+      },
+      [_vm._v("profil précédent")]
+    ),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        on: {
+          click: function($event) {
+            _vm.counter += 1
+          }
+        }
+      },
+      [_vm._v("profil suivant")]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -37127,21 +37140,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("Ceci zerty")]),
-    _vm._v(" "),
-    _c(
-      "ul",
-      _vm._l(_vm.items, function(item) {
-        return _c("li", [
-          _vm._v("\n            " + _vm._s(item.message) + "\n        ")
-        ])
-      }),
-      0
-    ),
-    _vm._v(" "),
-    _c("h1", [_vm._v(_vm._s(_vm.dev))])
-  ])
+  return _c(
+    "div",
+    [
+      _c("h1", [_vm._v("Un profil")]),
+      _vm._v(" "),
+      _vm._l(this.devs, function(de) {
+        return _c("div", [_c("h4", [_vm._v(_vm._s(de.name))])])
+      })
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

@@ -1,12 +1,9 @@
 <template>
     <div>
-        <h1>Ceci zerty</h1>
-        <ul >
-            <li v-for="item in items" >
-                {{ item.message }}
-            </li>
-        </ul>
-        <h1>{{dev}}</h1>
+        <h1>Un profil</h1>
+        <div v-for="de in this.devs">
+            <h4>{{ de.name }}</h4>
+        </div>
     </div>
 </template>
 
@@ -14,14 +11,7 @@
 
     export default {
         name: "produits",
-
-        data(){
-                return{
-            items: [
-                { message: 'Nom : Richard' },
-                { message: 'Talent : Il est bô' },
-                { message: 'Passion : le sandwich au jambon' }
-            ]}}
+        props: ["devs"]
     }
 </script>
 

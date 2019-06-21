@@ -64,3 +64,4 @@ Route::get('/', function () {
 });
 
 Route::get('/produit/{id}', 'ProfilController@show');
+
