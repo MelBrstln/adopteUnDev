@@ -76,7 +76,9 @@
 
 <div id="app">
 <index :devs="{{$dev}}" :ids="{{$id}}"></index>
-</div>
+
+</div></div><a href="{{$id}}/sendMessage">Mettre dans son panier</a>
+
 
 
 </body>

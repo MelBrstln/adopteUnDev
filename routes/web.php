@@ -64,5 +64,5 @@ Route::get('/', function () {
 });
 
 Route::get('/produit/{id}', 'ProfilController@show');
-Route::get('/message/{id}', 'ProfilController@message')->name('sendMessage');
+Route::get('/produit/{id}/sendMessage', 'ProfilController@message')->name('sendMessage');
 

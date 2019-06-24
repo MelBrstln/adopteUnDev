@@ -21,6 +21,6 @@ class ProfilController extends Controller
 
     public function message($id){
         $dev = Developer::all()->where('id', $id);
-        return view('message', ['dev' => $dev]);
+        return view('message', ['dev' => $dev, 'id' => $id]);
     }
 }

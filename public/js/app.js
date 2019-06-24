@@ -1745,13 +1745,17 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this.counter--;
+      location.href = this.counter;
     },
     numeroIdIncrement: function numeroIdIncrement() {
       this.counter++;
+      this.ids++;
 
       if (this.counter === this.devs.length) {
         this.counter = this.counter - 1;
       }
+
+      location.href = this.counter;
     },
     envoyerMessage: function envoyerMessage(id) {}
   }

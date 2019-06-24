@@ -24,16 +24,18 @@
         methods: {
             numeroIdDecrement : function (){
                 if(this.counter <1){
-                    this.counter = 1
+                    this.counter = 1;
                 }
                 this.counter --;
-
+                location.href = this.counter;
             },
             numeroIdIncrement : function (){
                 this.counter ++;
+                this.ids ++;
                 if(this.counter === this.devs.length){
                     this.counter = this.counter -1 ;
                 }
+                location.href = this.counter;
             },
             envoyerMessage : function(id){
 
