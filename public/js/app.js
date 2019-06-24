@@ -37178,7 +37178,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "router-link",
-            { attrs: { to: "/devs", dev: this.devs[_vm.counter] } },
+            { attrs: { to: { name: "devs", params: { dev: _vm.devs } } } },
             [_vm._v("Voir profil")]
           ),
           _vm._v(" "),
