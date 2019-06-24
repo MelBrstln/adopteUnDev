@@ -5,8 +5,8 @@
         <button v-on:click="numeroIdDecrement()">profil précédent</button>
         <button v-on:click="numeroIdIncrement()">profil suivant</button>
 
-        <button v-on:click="envoyerMessage(this.devs[(counter)].id)">Mettre dans le panier</button>
-
+        <!--<button v-on:click="envoyerMessage(this.devs[(counter)].id)">Mettre dans le panier</button>-->
+    <button v-on:click='envoyerMessage(counter)'>Mettre dans son panier</button>
     </div>
 </template>
 
@@ -27,7 +27,7 @@
                     this.counter = 1;
                 }
                 this.counter --;
-                location.href = this.counter;
+
             },
             numeroIdIncrement : function (){
                 this.counter ++;
@@ -35,11 +35,10 @@
                 if(this.counter === this.devs.length){
                     this.counter = this.counter -1 ;
                 }
-                location.href = this.counter;
+
             },
-            envoyerMessage : function(id){
-
-
+            envoyerMessage : function($id){
+                location.href = $id + "/sendMessage";
 
             }
         }

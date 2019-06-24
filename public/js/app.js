@@ -1745,7 +1745,6 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this.counter--;
-      location.href = this.counter;
     },
     numeroIdIncrement: function numeroIdIncrement() {
       this.counter++;
@@ -1754,10 +1753,10 @@ __webpack_require__.r(__webpack_exports__);
       if (this.counter === this.devs.length) {
         this.counter = this.counter - 1;
       }
-
-      location.href = this.counter;
     },
-    envoyerMessage: function envoyerMessage(id) {}
+    envoyerMessage: function envoyerMessage($id) {
+      location.href = $id + "/sendMessage";
+    }
   }
 });
 
@@ -37130,11 +37129,11 @@ var render = function() {
       {
         on: {
           click: function($event) {
-            _vm.envoyerMessage(this.devs[_vm.counter].id)
+            return _vm.envoyerMessage(_vm.counter)
           }
         }
       },
-      [_vm._v("Mettre dans le panier")]
+      [_vm._v("Mettre dans son panier")]
     )
   ])
 }
