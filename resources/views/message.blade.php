@@ -73,8 +73,9 @@
     </style>
 </head>
 <body>
+<h1>{{$id}}</h1>
 <h1>Ceci est ma page message</h1>
-<h2>{{$id}}</h2>
+<h2>{{$dev->name}}</h2>
 
 </body>
 </html>
