@@ -1,10 +1,13 @@
 <template>
-    <div>Ceci est ma page devs</div>
+    <div>Ceci est ma page devs
+    {{this.dev}}
+    </div>
 </template>
 
 <script>
     export default {
-        name: "devs"
+        name: "devs",
+        props: ["dev"]
     }
 </script>
 

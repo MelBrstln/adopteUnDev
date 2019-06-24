@@ -1701,8 +1701,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "devs"
+  name: "devs",
+  props: ["dev"]
 });
 
 /***/ }),
@@ -37097,7 +37100,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("Ceci est ma page devs")])
+  return _c("div", [
+    _vm._v("Ceci est ma page devs\n" + _vm._s(this.dev) + "\n")
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -37171,9 +37176,11 @@ var render = function() {
             [_vm._v("profil précédent")]
           ),
           _vm._v(" "),
-          _c("router-link", { attrs: { to: "/devs" } }, [
-            _vm._v("Voir profil")
-          ]),
+          _c(
+            "router-link",
+            { attrs: { to: "/devs", dev: this.devs[_vm.counter] } },
+            [_vm._v("Voir profil")]
+          ),
           _vm._v(" "),
           _c(
             "button",
@@ -52468,7 +52475,8 @@ var routes = [{
 }, {
   path: '/devs',
   name: 'devs',
-  component: _components_devs_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+  component: _components_devs_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+  props: true
 }];
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   history: true,

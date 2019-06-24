@@ -22,6 +22,7 @@ const routes = [
         path: '/devs',
         name: 'devs',
         component: Devs,
+        props : true
     },
 ];
 

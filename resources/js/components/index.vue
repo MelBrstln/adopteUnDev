@@ -5,7 +5,7 @@
             <h1>{{ title }}{{this.devs[(counter)].name}}</h1>
                 {{this.counter}}
                 <button v-on:click="numeroIdDecrement()">profil précédent</button>
-                <router-link to="/devs">Voir profil</router-link>
+                <router-link to="/devs" :dev="this.devs[(counter)]">Voir profil</router-link>
                 <button v-on:click="numeroIdIncrement()">profil suivant</button>
 
                 <!--<button v-on:click="envoyerMessage(this.devs[(counter)].id)">Mettre dans le panier</button>-->
