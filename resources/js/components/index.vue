@@ -1,19 +1,24 @@
 <template>
     <div id="app">
-    <h1>{{ title }}{{this.devs[(counter)].name}}</h1>
-        {{this.counter}}
-        <button v-on:click="numeroIdDecrement()">profil précédent</button>
-        <button v-on:click="numeroIdIncrement()">profil suivant</button>
+        <h1>Ceci ne marche pas</h1>
+        <div id="listeProfil">
+            <h1>{{ title }}{{this.devs[(counter)].name}}</h1>
+                {{this.counter}}
+                <button v-on:click="numeroIdDecrement()">profil précédent</button>
+                <router-link to="/devs">Voir profil</router-link>
+                <button v-on:click="numeroIdIncrement()">profil suivant</button>
 
-        <!--<button v-on:click="envoyerMessage(this.devs[(counter)].id)">Mettre dans le panier</button>-->
-    <button v-on:click='envoyerMessage(counter)'>Mettre dans son panier</button>
+                <!--<button v-on:click="envoyerMessage(this.devs[(counter)].id)">Mettre dans le panier</button>-->
+            <button v-on:click='envoyerMessage(counter)'>Mettre dans son panier</button>
+        </div>
+
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
 
     export default {
-        resource: null,
         data() {
             return {
                 title: 'Profil de ',
@@ -35,6 +40,7 @@
                 if(this.counter === this.devs.length){
                     this.counter = this.counter -1 ;
                 }
+
 
             },
             envoyerMessage : function($id){

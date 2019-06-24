@@ -8,6 +8,7 @@ Vue.use(VueRouter);
  */
 import Home from './components/home.vue';
 import Products from './components/produits.vue';
+import Devs from './components/devs.vue';
 
 // 2. Définition des routes
 // Chaque route doit être mappée à un composant
@@ -18,9 +19,9 @@ const routes = [
         component: Home
     },
     {
-        path: '/components/produits',
-        name: 'products',
-        component: Products,
+        path: '/devs',
+        name: 'devs',
+        component: Devs,
     },
 ];
 

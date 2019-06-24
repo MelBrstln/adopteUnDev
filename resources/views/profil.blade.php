@@ -76,7 +76,6 @@
 
 <div id="app">
 <index :devs="{{$dev}}" :ids="{{$id}}"></index>
-
 </div>
 
 
